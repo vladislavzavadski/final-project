@@ -14,7 +14,7 @@ public class Category {
     @Column(name = "cat_name")
     private String name;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "category", cascade = CascadeType.ALL)
     private Set<Offer> offerSet;
 
     public int getId() {
