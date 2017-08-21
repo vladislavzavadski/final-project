@@ -3,9 +3,10 @@ package com.netcracker.order.catalog.service.impl;
 import com.netcracker.order.catalog.domain.Category;
 import com.netcracker.order.catalog.repository.CategoryRepository;
 import com.netcracker.order.catalog.service.CategoryService;
-import com.netcracker.order.catalog.service.exception.CategoryNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Created by ulza1116 on 8/18/2017.
@@ -36,13 +37,15 @@ public class DefaultCategoryService implements CategoryService {
     }
 
     @Override
-    public void updateCategory(Category category) throws CategoryNotFoundException {
+    public void updateCategory(Category category, int categoryId) {
+        Category category1 = categoryRepository.getOne(categoryId);
+        category1.setName(category.getName());
+        categoryRepository.save(category1);
+    }
 
-        if(!categoryRepository.exists(category.getId())){
-            throw new CategoryNotFoundException("Category with id="+category.getId()+" was not found");
-        }
-
-        categoryRepository.save(category);
+    @Override
+    public void createCategory(List<Category> categories){
+        categoryRepository.save(categories);
     }
 
 }

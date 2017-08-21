@@ -1,7 +1,8 @@
 package com.netcracker.order.catalog.service;
 
 import com.netcracker.order.catalog.domain.Category;
-import com.netcracker.order.catalog.service.exception.CategoryNotFoundException;
+
+import java.util.List;
 
 /**
  * Created by ulza1116 on 8/18/2017.
@@ -13,5 +14,7 @@ public interface CategoryService {
 
     void deleteCategory(int categoryId);
 
-    void updateCategory(Category category) throws CategoryNotFoundException;
+    void updateCategory(Category category, int categoryId);
+
+    void createCategory(List<Category> categories);
 }

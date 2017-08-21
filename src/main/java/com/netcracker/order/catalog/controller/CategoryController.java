@@ -2,9 +2,11 @@ package com.netcracker.order.catalog.controller;
 
 import com.netcracker.order.catalog.domain.Category;
 import com.netcracker.order.catalog.service.CategoryService;
-import com.netcracker.order.catalog.service.exception.CategoryNotFoundException;
+import com.netcracker.order.catalog.service.exception.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * Created by ulza1116 on 8/18/2017.
@@ -35,9 +37,13 @@ public class CategoryController {
     }
 
     @RequestMapping(value = "/category", method = RequestMethod.PUT)
-    public void updateCategory(@RequestBody Category category) throws CategoryNotFoundException {
-        categoryService.updateCategory(category);
+    public void updateCategory(@RequestBody Category category) throws EntityNotFoundException {
+        categoryService.updateCategory(category, );
     }
 
+    @RequestMapping(value = "/category/list", method = RequestMethod.POST)
+    public void createCategory(@RequestBody List<Category> categories){
+        categoryService.createCategory(categories);
+    }
 
 }

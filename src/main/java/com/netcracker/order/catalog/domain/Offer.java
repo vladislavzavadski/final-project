@@ -1,7 +1,8 @@
 package com.netcracker.order.catalog.domain;
 
+
 import javax.persistence.*;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Table(name = "offer")
@@ -9,7 +10,7 @@ public class Offer {
     @Id
     @GeneratedValue
     @Column(name = "of_id")
-    private int id;
+    private Integer id;
 
     @Column(name = "of_name")
     private String name;
@@ -17,20 +18,20 @@ public class Offer {
     @Column(name = "of_price")
     private double price;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "cat_id", nullable = false)
     private Category category;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "offer_tag", joinColumns = {@JoinColumn(name = "of_id")},
-            inverseJoinColumns = {@JoinColumn(name = "cat_id")})
-    private Set<Tag> tags;
+            inverseJoinColumns = {@JoinColumn(name = "tag_id")})
+    private List<Tag> tags;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -58,49 +59,12 @@ public class Offer {
         this.category = category;
     }
 
-    public Set<Tag> getTags() {
+    public List<Tag> getTags() {
         return tags;
     }
 
-    public void setTags(Set<Tag> tags) {
+    public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Offer offer = (Offer) o;
-
-        if (id != offer.id) return false;
-        if (Double.compare(offer.price, price) != 0) return false;
-        if (name != null ? !name.equals(offer.name) : offer.name != null) return false;
-        if (category != null ? !category.equals(offer.category) : offer.category != null) return false;
-        return tags != null ? tags.equals(offer.tags) : offer.tags == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result;
-        long temp;
-        result = id;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        temp = Double.doubleToLongBits(price);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + (category != null ? category.hashCode() : 0);
-        result = 31 * result + (tags != null ? tags.hashCode() : 0);
-        return result;
-    }
-
-    @Override
-    public String toString() {
-        return "Offer{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", category=" + category +
-                ", tags=" + tags +
-                '}';
-    }
 }

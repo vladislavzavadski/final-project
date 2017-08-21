@@ -1,7 +1,9 @@
 package com.netcracker.order.catalog.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Table(name = "tag")
@@ -9,19 +11,20 @@ public class Tag {
     @Id
     @GeneratedValue
     @Column(name = "tag_id")
-    private int id;
+    private Integer id;
 
     @Column(name = "tag_value")
     private String value;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "tags")
-    private Set<Offer> offerSet;
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "tags", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Offer> offerList;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -33,12 +36,12 @@ public class Tag {
         this.value = value;
     }
 
-    public Set<Offer> getOfferSet() {
-        return offerSet;
+    public List<Offer> getOfferList() {
+        return offerList;
     }
 
-    public void setOfferSet(Set<Offer> offerSet) {
-        this.offerSet = offerSet;
+    public void setOfferList(List<Offer> offerList) {
+        this.offerList = offerList;
     }
 
     @Override
@@ -48,25 +51,11 @@ public class Tag {
 
         Tag tag = (Tag) o;
 
-        if (id != tag.id) return false;
-        if (value != null ? !value.equals(tag.value) : tag.value != null) return false;
-        return offerSet != null ? offerSet.equals(tag.offerSet) : tag.offerSet == null;
+        return tag.getId().equals(id);
     }
 
     @Override
     public int hashCode() {
-        int result = id;
-        result = 31 * result + (value != null ? value.hashCode() : 0);
-        result = 31 * result + (offerSet != null ? offerSet.hashCode() : 0);
-        return result;
-    }
-
-    @Override
-    public String toString() {
-        return "Tag{" +
-                "id=" + id +
-                ", value='" + value + '\'' +
-                ", offerSet=" + offerSet +
-                '}';
+        return id;
     }
 }
