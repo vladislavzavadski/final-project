@@ -2,7 +2,6 @@ package com.netcracker.order.catalog.controller;
 
 import com.netcracker.order.catalog.domain.Category;
 import com.netcracker.order.catalog.service.CategoryService;
-import com.netcracker.order.catalog.service.exception.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +13,7 @@ import java.util.List;
 @RestController
 public class CategoryController {
 
-    private CategoryService categoryService;
+    private final CategoryService categoryService;
 
     @Autowired
     public CategoryController(CategoryService categoryService) {
@@ -36,9 +35,9 @@ public class CategoryController {
         categoryService.deleteCategory(categoryId);
     }
 
-    @RequestMapping(value = "/category", method = RequestMethod.PUT)
-    public void updateCategory(@RequestBody Category category) throws EntityNotFoundException {
-        categoryService.updateCategory(category, );
+    @RequestMapping(value = "/category/{categoryId}", method = RequestMethod.PUT)
+    public void updateCategory(@RequestBody Category category, @PathVariable("categoryId") int categoryId) {
+        categoryService.updateCategory(category, categoryId);
     }
 
     @RequestMapping(value = "/category/list", method = RequestMethod.POST)
