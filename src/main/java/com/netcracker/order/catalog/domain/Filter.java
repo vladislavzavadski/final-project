@@ -4,8 +4,8 @@ public class Filter {
 
     private int tagId;
     private int categoryId;
-    private int minPrice;
-    private int maxPrice;
+    private double minPrice;
+    private double maxPrice;
     private int limit;
     private int startFrom;
 
@@ -25,19 +25,19 @@ public class Filter {
         this.categoryId = categoryId;
     }
 
-    public int getMinPrice() {
+    public double getMinPrice() {
         return minPrice;
     }
 
-    public void setMinPrice(int minPrice) {
+    public void setMinPrice(double minPrice) {
         this.minPrice = minPrice;
     }
 
-    public int getMaxPrice() {
+    public double getMaxPrice() {
         return maxPrice;
     }
 
-    public void setMaxPrice(int maxPrice) {
+    public void setMaxPrice(double maxPrice) {
         this.maxPrice = maxPrice;
     }
 
