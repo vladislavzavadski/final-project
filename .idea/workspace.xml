@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b29256a0-e2fe-4299-adb7-f9a1a6858fc4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/controller/CategoryController.java" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/controller/CategoryController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/controller/OfferController.java" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/controller/OfferController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/service/OfferService.java" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/service/OfferService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/service/impl/DefaultOfferService.java" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/service/impl/DefaultOfferService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,7 +27,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TagController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TagController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/controller/TagController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="680">
@@ -77,12 +78,14 @@
       <file leaf-file-name="DefaultOfferService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/service/impl/DefaultOfferService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+            <state relative-caret-position="754">
+              <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1876#1877#0" expanded="true" />
                 <element signature="e#1931#1932#0" expanded="true" />
+                <element signature="e#2242#2243#0" expanded="true" />
+                <element signature="e#2289#2290#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,15 +121,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OfferController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OfferController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/controller/OfferController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+            <state relative-caret-position="23">
+              <caret line="14" column="15" lean-forward="true" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1438#1439#0" expanded="true" />
                 <element signature="e#1491#1492#0" expanded="true" />
+                <element signature="e#2325#2326#0" expanded="true" />
+                <element signature="e#2374#2375#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -193,10 +198,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/service/CategoryService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/service/impl/DefaultCategoryService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/service/impl/DefaultTagService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/service/impl/DefaultOfferService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/controller/OfferController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/controller/CategoryController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/controller/TagController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/service/impl/DefaultOfferService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/controller/OfferController.java" />
       </list>
     </option>
   </component>
@@ -961,7 +966,7 @@
       <updated>1502999929044</updated>
       <workItem from="1502999936443" duration="3620000" />
       <workItem from="1503061469652" duration="19839000" />
-      <workItem from="1503317826003" duration="4996000" />
+      <workItem from="1503317826003" duration="6521000" />
     </task>
     <task id="LOCAL-00001" summary="Category CRUD">
       <created>1503067359598</created>
@@ -981,7 +986,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28455000" />
+    <option name="totallyTimeSpent" value="29980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1072,6 +1077,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1876#1877#0" expanded="true" />
             <element signature="e#1931#1932#0" expanded="true" />
+            <element signature="e#2242#2243#0" expanded="true" />
+            <element signature="e#2289#2290#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1129,6 +1136,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1438#1439#0" expanded="true" />
             <element signature="e#1491#1492#0" expanded="true" />
+            <element signature="e#2325#2326#0" expanded="true" />
+            <element signature="e#2374#2375#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1434,14 +1443,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/service/impl/DefaultOfferService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/controller/TagController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+        <state relative-caret-position="680">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1876#1877#0" expanded="true" />
-            <element signature="e#1931#1932#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1070#1071#0" expanded="true" />
+            <element signature="e#1377#1378#0" expanded="true" />
+            <element signature="e#1419#1420#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1456,28 +1467,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/controller/OfferController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/service/impl/DefaultOfferService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        <state relative-caret-position="754">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1438#1439#0" expanded="true" />
-            <element signature="e#1491#1492#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1931#1932#0" expanded="true" />
+            <element signature="e#2242#2243#0" expanded="true" />
+            <element signature="e#2289#2290#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/controller/TagController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/order/catalog/controller/OfferController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="23">
+          <caret line="14" column="15" lean-forward="true" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1022#1023#0" expanded="true" />
-            <element signature="e#1070#1071#0" expanded="true" />
-            <element signature="e#1377#1378#0" expanded="true" />
-            <element signature="e#1419#1420#0" expanded="true" />
+            <element signature="e#1438#1439#0" expanded="true" />
+            <element signature="e#1491#1492#0" expanded="true" />
+            <element signature="e#2325#2326#0" expanded="true" />
+            <element signature="e#2374#2375#0" expanded="true" />
           </folding>
         </state>
       </provider>

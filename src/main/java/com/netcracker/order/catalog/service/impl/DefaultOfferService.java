@@ -71,4 +71,9 @@ public class DefaultOfferService implements OfferService {
         offerRepository.save(offer1);
     }
 
+    @Override
+    public void deleteOffer(int offerId){
+        offerRepository.delete(offerId);
+    }
+
 }

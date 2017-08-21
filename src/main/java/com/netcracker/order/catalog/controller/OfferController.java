@@ -57,4 +57,9 @@ public class OfferController {
         offerService.changeCategory(category, offerId);
     }
 
+    @RequestMapping(value = "/offer/{offerId}", method = RequestMethod.DELETE)
+    public void deleteOffer(@PathVariable("offerId") int offerId){
+        offerService.deleteOffer(offerId);
+    }
+
 }

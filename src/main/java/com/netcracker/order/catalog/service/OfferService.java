@@ -23,4 +23,6 @@ public interface OfferService {
     Offer getOffer(int offerId);
 
     void updateOffer(Offer offer, int offerId);
+
+    void deleteOffer(int offerId);
 }
