@@ -1,6 +1,7 @@
 package com.netcracker.order.catalog.service;
 
 import com.netcracker.order.catalog.domain.Category;
+import com.netcracker.order.catalog.domain.Filter;
 import com.netcracker.order.catalog.domain.Offer;
 import com.netcracker.order.catalog.domain.Tag;
 
@@ -25,4 +26,6 @@ public interface OfferService {
     void updateOffer(Offer offer, int offerId);
 
     void deleteOffer(int offerId);
+
+    List<Offer> searchOffers(Filter filter);
 }

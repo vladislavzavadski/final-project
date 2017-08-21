@@ -1,6 +1,7 @@
 package com.netcracker.order.catalog.controller;
 
 import com.netcracker.order.catalog.domain.Category;
+import com.netcracker.order.catalog.domain.Filter;
 import com.netcracker.order.catalog.domain.Offer;
 import com.netcracker.order.catalog.domain.Tag;
 import com.netcracker.order.catalog.service.OfferService;
@@ -60,6 +61,11 @@ public class OfferController {
     @RequestMapping(value = "/offer/{offerId}", method = RequestMethod.DELETE)
     public void deleteOffer(@PathVariable("offerId") int offerId){
         offerService.deleteOffer(offerId);
+    }
+
+    @RequestMapping(value = "/offer/search", method = RequestMethod.GET)
+    public List<Offer> searchOffersByFilter(Filter filter){
+        return offerService.searchOffers(filter);
     }
 
 }

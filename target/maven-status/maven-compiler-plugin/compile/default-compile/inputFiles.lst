@@ -1,0 +1,17 @@
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/repository/TagRepository.java
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/controller/OfferController.java
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/repository/CategoryRepository.java
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/domain/Tag.java
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/service/TagService.java
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/controller/CategoryController.java
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/Main.java
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/service/impl/DefaultCategoryService.java
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/domain/Category.java
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/domain/Offer.java
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/repository/OfferDao.java
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/service/CategoryService.java
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/controller/TagController.java
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/repository/OfferRepository.java
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/service/OfferService.java
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/service/impl/DefaultOfferService.java
+/home/vladislav/Dropbox/Samples/catalog/src/main/java/com/netcracker/order/catalog/service/impl/DefaultTagService.java

@@ -1,6 +1,7 @@
 package com.netcracker.order.catalog.service.impl;
 
 import com.netcracker.order.catalog.domain.Category;
+import com.netcracker.order.catalog.domain.Filter;
 import com.netcracker.order.catalog.domain.Offer;
 import com.netcracker.order.catalog.domain.Tag;
 import com.netcracker.order.catalog.repository.OfferRepository;
@@ -74,6 +75,13 @@ public class DefaultOfferService implements OfferService {
     @Override
     public void deleteOffer(int offerId){
         offerRepository.delete(offerId);
+    }
+
+    @Override
+    public List<Offer> searchOffers(Filter filter){
+        PageRequest pageRequest = new PageRequest(filter.getStartFrom(), filter.getLimit());
+        return offerRepository.findOffers(filter.getTagId(), filter.getCategoryId(), filter.getMinPrice(),
+                filter.getMaxPrice(), pageRequest);
     }
 
 }
