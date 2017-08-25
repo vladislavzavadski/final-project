@@ -8,7 +8,7 @@ import java.util.List;
  * Created by ulza1116 on 8/18/2017.
  */
 public interface CategoryService {
-    void createCategory(Category category);
+    Category createCategory(Category category);
 
     Category getCategory(int categoryId);
 
@@ -16,5 +16,5 @@ public interface CategoryService {
 
     void updateCategory(Category category, int categoryId);
 
-    void createCategory(List<Category> categories);
+    List<Integer> createCategory(List<Category> categories);
 }

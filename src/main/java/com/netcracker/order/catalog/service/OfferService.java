@@ -11,7 +11,7 @@ import java.util.List;
  * Created by ulza1116 on 8/21/2017.
  */
 public interface OfferService {
-    void createOffer(Offer offer);
+    Offer createOffer(Offer offer);
 
     List<Offer> findAllOffers(int limit, int startFrom);
 

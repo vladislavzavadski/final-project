@@ -22,13 +22,13 @@ public class DefaultTagService implements TagService {
     }
 
     @Override
-    public void createTag(Tag tag){
-        tagRepository.save(tag);
+    public Tag createTag(Tag tag){
+        return tagRepository.save(tag);
     }
 
     @Override
     public Tag getTag(int tagId){
-        return tagRepository.getOne(tagId);
+        return tagRepository.findOne(tagId);
     }
 
     @Override
@@ -38,7 +38,7 @@ public class DefaultTagService implements TagService {
 
     @Override
     public void updateTag(Tag tag, int tagId) {
-        Tag tag1 = tagRepository.getOne(tagId);
+        Tag tag1 = tagRepository.findOne(tagId);
         tag1.setValue(tag.getValue());
         tagRepository.save(tag1);
     }

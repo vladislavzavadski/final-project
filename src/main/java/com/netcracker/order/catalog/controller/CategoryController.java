@@ -2,6 +2,7 @@ package com.netcracker.order.catalog.controller;
 
 import com.netcracker.order.catalog.domain.Category;
 import com.netcracker.order.catalog.service.CategoryService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +12,7 @@ import java.util.List;
  * Created by ulza1116 on 8/18/2017.
  */
 @RestController
+@Api
 public class CategoryController {
 
     private final CategoryService categoryService;

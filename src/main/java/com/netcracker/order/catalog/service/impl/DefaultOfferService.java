@@ -27,8 +27,8 @@ public class DefaultOfferService implements OfferService {
     }
 
     @Override
-    public void createOffer(Offer offer){
-        offerRepository.save(offer);
+    public Offer createOffer(Offer offer){
+        return offerRepository.save(offer);
     }
 
     @Override
@@ -54,7 +54,7 @@ public class DefaultOfferService implements OfferService {
 
     @Override
     public void changeCategory(Category category, int offerId){
-        Offer offer = offerRepository.getOne(offerId);
+        Offer offer = offerRepository.findOne(offerId);
         offer.setCategory(category);
         offerRepository.save(offer);
     }
@@ -66,7 +66,7 @@ public class DefaultOfferService implements OfferService {
 
     @Override
     public void updateOffer(Offer offer, int offerId){
-        Offer offer1 = offerRepository.getOne(offerId);
+        Offer offer1 = offerRepository.findOne(offerId);
         offer1.setName(offer.getName());
         offer1.setPrice(offer.getPrice());
         offerRepository.save(offer1);

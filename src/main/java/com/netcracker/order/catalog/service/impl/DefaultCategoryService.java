@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by ulza1116 on 8/18/2017.
@@ -22,8 +23,8 @@ public class DefaultCategoryService implements CategoryService {
     }
 
     @Override
-    public void createCategory(Category category){
-        categoryRepository.save(category);
+    public Category createCategory(Category category){
+        return categoryRepository.save(category);
     }
 
     @Override
@@ -38,14 +39,14 @@ public class DefaultCategoryService implements CategoryService {
 
     @Override
     public void updateCategory(Category category, int categoryId) {
-        Category category1 = categoryRepository.getOne(categoryId);
+        Category category1 = categoryRepository.findOne(categoryId);
         category1.setName(category.getName());
         categoryRepository.save(category1);
     }
 
     @Override
-    public void createCategory(List<Category> categories){
-        categoryRepository.save(categories);
+    public List<Integer> createCategory(List<Category> categories){
+        return categoryRepository.save(categories).stream().map(Category::getId).collect(Collectors.toList());
     }
 
 }

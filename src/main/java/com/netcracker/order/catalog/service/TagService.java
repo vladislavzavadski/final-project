@@ -8,7 +8,7 @@ import java.util.List;
  * Created by ulza1116 on 8/21/2017.
  */
 public interface TagService {
-    void createTag(Tag tag);
+    Tag createTag(Tag tag);
 
     Tag getTag(int tagId);
 
